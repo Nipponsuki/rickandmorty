@@ -1102,6 +1102,66 @@ class Document extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
     }
   }
 
+  render() {
+    return __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Html"], {
+      lang: "en",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, __jsx("meta", {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }), __jsx("meta", {
+      charSet: "utf-8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }), __jsx("link", {
+      rel: "preload",
+      href: "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap",
+      as: "font",
+      crossOrigin: "",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    })), __jsx("body", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })));
+  }
+
 }
 
 /***/ }),

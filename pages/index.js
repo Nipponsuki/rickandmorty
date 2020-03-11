@@ -1,38 +1,14 @@
 import React from 'react';
-import gql from 'graphql-tag';
-import { useQuery } from '@apollo/react-hooks';
-import styled from 'styled-components';
+import Head from 'next/head';
 
-const Heading = styled.h1`
-  color: hotpink;
-`;
+import LocationsContainer from 'src/components/LocationsContainer';
 
-const LOCATIONS_QUERY = gql`
-  query Locations {
-    locations {
-      info {
-        count
-        pages
-        next
-        prev
-      }
-      results {
-        name
-        type
-      }
-    }
-  }
-`;
-
-const Home = () => {
-  const { data, loading, error } = useQuery(LOCATIONS_QUERY);
-  console.log(data);
-
-  return (
-    <>
-      <Heading>yo</Heading>
-    </>
-  );
-};
-
+const Home = () => (
+  <>
+    <Head>
+      <title>R&M | Home</title>
+    </Head>
+    <LocationsContainer />
+  </>
+);
 export default Home;
