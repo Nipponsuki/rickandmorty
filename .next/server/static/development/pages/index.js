@@ -93,6 +93,85 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Common/PageWrapper/index.js":
+/*!************************************************!*\
+  !*** ./components/Common/PageWrapper/index.js ***!
+  \************************************************/
+/*! exports provided: PageWrapper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageWrapper", function() { return PageWrapper; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const PageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "PageWrapper",
+  componentId: "sc-1bfvjjb-0"
+})(["margin:0 auto;max-width:1480px;overflow:hidden;"]);
+
+/***/ }),
+
+/***/ "./components/Loader/index.js":
+/*!************************************!*\
+  !*** ./components/Loader/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles */ "./components/Loader/styles.js");
+var _jsxFileName = "/Users/alex/Desktop/rickandmorty/components/Loader/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const LOADER_URL = 'https://cdn.dribbble.com/users/1897588/screenshots/3887258/gif_export.gif';
+
+
+const Loader = () => __jsx(_styles__WEBPACK_IMPORTED_MODULE_1__["LoaderContainer"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+}, __jsx("img", {
+  src: LOADER_URL,
+  alt: "loading...",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}));
+
+/* harmony default export */ __webpack_exports__["default"] = (Loader);
+
+/***/ }),
+
+/***/ "./components/Loader/styles.js":
+/*!*************************************!*\
+  !*** ./components/Loader/styles.js ***!
+  \*************************************/
+/*! exports provided: LoaderContainer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoaderContainer", function() { return LoaderContainer; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const LoaderContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styles__LoaderContainer",
+  componentId: "sc-1jfnr58-0"
+})(["width:100%;@media (min-width:768px){width:200px;height:100px;img{border-radius:50%;}}img{width:100%;}"]);
+
+
+/***/ }),
+
 /***/ "./components/LocationsContainer/index.js":
 /*!************************************************!*\
   !*** ./components/LocationsContainer/index.js ***!
@@ -108,7 +187,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles */ "./components/LocationsContainer/styles.js");
+/* harmony import */ var _Loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Loader */ "./components/Loader/index.js");
+var _jsxFileName = "/Users/alex/Desktop/rickandmorty/components/LocationsContainer/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -135,11 +219,60 @@ const LocationsContainer = () => {
     loading,
     error
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(LOCATIONS_QUERY);
-  console.log(data);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, data && JSON.stringify(data));
+  return __jsx(_styles__WEBPACK_IMPORTED_MODULE_3__["StyledLocationsContainer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, error && __jsx(_styles__WEBPACK_IMPORTED_MODULE_3__["ErrorMessage"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }), loading && __jsx(_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }), data && data.locations.results.map(location => __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, location.name)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (LocationsContainer);
+
+/***/ }),
+
+/***/ "./components/LocationsContainer/styles.js":
+/*!*************************************************!*\
+  !*** ./components/LocationsContainer/styles.js ***!
+  \*************************************************/
+/*! exports provided: StyledLocationsContainer, ErrorMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyledLocationsContainer", function() { return StyledLocationsContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorMessage", function() { return ErrorMessage; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const StyledLocationsContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styles__StyledLocationsContainer",
+  componentId: "y9am3s-0"
+})(["display:flex;align-items:center;justify-content:flex-start;flex-direction:column;span{color:hotpink;}"]);
+const ErrorMessage = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
+  displayName: "styles__ErrorMessage",
+  componentId: "y9am3s-1"
+})(["color:red;font-weight:bold;"]);
+
 
 /***/ }),
 
@@ -157,28 +290,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var src_components_LocationsContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/components/LocationsContainer */ "./components/LocationsContainer/index.js");
+/* harmony import */ var src_components_Common_PageWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/components/Common/PageWrapper */ "./components/Common/PageWrapper/index.js");
 var _jsxFileName = "/Users/alex/Desktop/rickandmorty/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-const Home = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+
+const Home = () => __jsx(src_components_Common_PageWrapper__WEBPACK_IMPORTED_MODULE_3__["PageWrapper"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 8
   },
   __self: undefined
-}, __jsx("title", {
+}, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 9
   },
   __self: undefined
+}, __jsx("title", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
 }, "R&M | Home")), __jsx(src_components_LocationsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 12
   },
   __self: undefined
 }));
@@ -240,6 +381,17 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 
