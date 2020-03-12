@@ -17691,7 +17691,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  body {\n\t\tfont-family: Roboto, sans-serif;\n    box-sizing: border-box;\n\t\tfont-size: ", ";\n\t\tline-height: ", ";\n\t\tfont-style: normal;\n\t\tbackground-image: ", ";\n\t\tbackground-size: cover;\n\t\tbackground-position: center center;\n  }\n  *,\n  *::after,\n  *::before { \n    margin: 0;\n    padding: 0;\n    box-sizing: inherit;\n  \n  a{\n    color: inherit;\n    text-decoration: none;\n    font-family: inherit;\n  }\n}\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  body {\n\t\tfont-family: Roboto, sans-serif;\n    box-sizing: border-box;\n\t\tfont-size: ", ";\n\t\tline-height: ", ";\n\t\tfont-style: normal;\n\t\tbackground-image: ", ";\n\t\tbackground-size: cover;\n\t\tbackground-position: center center;\n   \n  }\n  *,\n  *::after,\n  *::before { \n    margin: 0;\n    padding: 0;\n    box-sizing: inherit;\n  \n  a{\n    color: inherit;\n    text-decoration: none;\n    font-family: inherit;\n  }\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;

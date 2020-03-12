@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LOADER_URL =
+export const LOADER_URL =
   'https://cdn.dribbble.com/users/1897588/screenshots/3887258/gif_export.gif';
 
 import { LoaderContainer } from './styles';

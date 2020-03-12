@@ -4,7 +4,9 @@ import gql from 'graphql-tag';
 
 import { StyledLocationsContainer, ErrorMessage } from './styles';
 
-import Loader from '../Loader';
+import Loader from 'src/components/Loader';
+import LocationItem from './LocationItem';
+import Link from 'next/link';
 
 const LOCATIONS_QUERY = gql`
   query Locations {
@@ -18,6 +20,7 @@ const LOCATIONS_QUERY = gql`
       results {
         name
         type
+        id
       }
     }
   }
@@ -31,7 +34,13 @@ const LocationsContainer = () => {
       {error && <ErrorMessage />}
       {loading && <Loader />}
       {data &&
-        data.locations.results.map(location => <span>{location.name}</span>)}
+        data.locations.results.map(location => (
+          <Link href={`/locations/${location.id}`} key={location.id}>
+            <a>
+              <LocationItem location={location} />
+            </a>
+          </Link>
+        ))}
     </StyledLocationsContainer>
   );
 };

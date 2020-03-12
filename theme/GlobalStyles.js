@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import background from 'src/assets/images/galaxy.png';
 
-
 const GlobalStyle = createGlobalStyle`
   body {
 		font-family: Roboto, sans-serif;
@@ -12,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 		background-image: ${`url(${background})`};
 		background-size: cover;
 		background-position: center center;
+   
   }
   *,
   *::after,

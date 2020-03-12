@@ -2405,6 +2405,7 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobal
 		background-image: ${`url(${src_assets_images_galaxy_png__WEBPACK_IMPORTED_MODULE_1___default.a})`};
 		background-size: cover;
 		background-position: center center;
+   
   }
   *,
   *::after,
