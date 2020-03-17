@@ -194,7 +194,7 @@ __webpack_require__.r(__webpack_exports__);
 const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.header.withConfig({
   displayName: "styles__StyledHeader",
   componentId: "sc-13hk75k-0"
-})(["width:100%;display:flex;align-items:center;justify-content:flex-start;padding:2px;overflow:hidden;"]);
+})(["width:100%;display:flex;align-items:center;justify-content:flex-start;padding:2px;overflow:hidden;a{text-decoration:none;}"]);
 const Logo = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "styles__Logo",
   componentId: "sc-13hk75k-1"

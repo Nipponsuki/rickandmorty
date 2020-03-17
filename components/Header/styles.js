@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const StyledHeader = styled.header`
   width: 100%;
   display: flex;
@@ -8,6 +7,9 @@ const StyledHeader = styled.header`
   justify-content: flex-start;
   padding: 2px;
   overflow: hidden;
+  a {
+    text-decoration: none;
+  }
 `;
 
 const Logo = styled.div`

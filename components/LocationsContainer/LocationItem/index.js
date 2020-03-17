@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
@@ -47,17 +47,19 @@ const LOCATION_TYPES = {
   tv: tvTypeImage
 };
 
-const LocationItem = ({ location: { id, name, type } }) => {
+const LocationItem = memo(({ location: { id, name, type } }) => {
   const { data, loading, error } = useQuery(LOCATION_QUERY, {
     variables: { id }
   });
-
-  console.log(data);
   return (
     <LocationItemContainer>
       <LocationItemImage>
         <img
-          src={LOCATION_TYPES[type.replace(' ', '_').toLowerCase()]}
+          src={
+            LOCATION_TYPES[type.replace(' ', '_').toLowerCase()]
+              ? LOCATION_TYPES[type.replace(' ', '_').toLowerCase()]
+              : unknownTypeImage
+          }
           alt={type}
         />
       </LocationItemImage>
@@ -67,17 +69,18 @@ const LocationItem = ({ location: { id, name, type } }) => {
         <LocationItemResidentsContainer>
           {data &&
             data.location.residents.slice(0, 3).map(resident => (
-              <LocationItemResident key={resident.id}>
-                <img
-                  src={!resident.image ? LOADER_URL : resident.image}
-                  alt={resident.name}
-                />
-              </LocationItemResident>
+              <React.Fragment key={resident.id}>
+                {resident.image && (
+                  <LocationItemResident key={resident.id}>
+                    <img src={resident.image} alt={resident.name} />
+                  </LocationItemResident>
+                )}
+              </React.Fragment>
             ))}
         </LocationItemResidentsContainer>
       </LocationItemInfo>
     </LocationItemContainer>
   );
-};
+});
 
 export default LocationItem;

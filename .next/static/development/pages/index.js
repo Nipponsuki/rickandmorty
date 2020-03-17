@@ -174,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 var LoaderContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__LoaderContainer",
   componentId: "sc-1jfnr58-0"
-})(["@media (min-width:768px){width:100px;height:100px;img{border-radius:50%;}}img{width:100%;}"]);
+})(["margin:0 auto;@media (min-width:768px){width:100px;height:100px;img{border-radius:50%;}}img{width:100%;}"]);
 
 
 /***/ }),
@@ -254,8 +254,7 @@ var LOCATION_TYPES = {
   space_station: src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_12___default.a,
   tv: src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_13___default.a
 };
-
-var LocationItem = function LocationItem(_ref) {
+var LocationItem = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (_ref) {
   var _ref$location = _ref.location,
       id = _ref$location.id,
       name = _ref$location.name,
@@ -270,71 +269,76 @@ var LocationItem = function LocationItem(_ref) {
       loading = _useQuery.loading,
       error = _useQuery.error;
 
-  console.log(data);
   return __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 55
     },
     __self: this
   }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemImage"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 56
     },
     __self: this
   }, __jsx("img", {
-    src: LOCATION_TYPES[type.replace(' ', '_').toLowerCase()],
+    src: LOCATION_TYPES[type.replace(' ', '_').toLowerCase()] ? LOCATION_TYPES[type.replace(' ', '_').toLowerCase()] : src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: type,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 57
     },
     __self: this
   })), __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemInfo"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 66
     },
     __self: this
   }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["Title"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 67
     },
     __self: this
   }, name), __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["Text"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 68
     },
     __self: this
   }, type), __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemResidentsContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 69
     },
     __self: this
   }, data && data.location.residents.slice(0, 3).map(function (resident) {
-    return __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemResident"], {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
       key: resident.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 72
+      },
+      __self: this
+    }, resident.image && __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemResident"], {
+      key: resident.id,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74
       },
       __self: this
     }, __jsx("img", {
-      src: !resident.image ? src_components_Loader__WEBPACK_IMPORTED_MODULE_14__["LOADER_URL"] : resident.image,
+      src: resident.image,
       alt: resident.name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 75
       },
       __self: this
-    }));
+    })));
   }))));
-};
-
+});
 /* harmony default export */ __webpack_exports__["default"] = (LocationItem);
 
 /***/ }),
@@ -360,7 +364,7 @@ __webpack_require__.r(__webpack_exports__);
 var LocationItemContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__LocationItemContainer",
   componentId: "ozscmx-0"
-})(["box-shadow:2px 2px 10px rgba(29,99,234,0.48);background:#312a2a;width:95%;height:145px;margin:11px;display:flex;align-items:center;@media (min-width:768px){width:396px;}"]);
+})(["box-shadow:2px 2px 10px rgba(29,99,234,0.48);background:#312a2a;width:95%;height:145px;margin:11px;display:flex;align-items:flex-start;@media (min-width:768px){width:396px;}"]);
 var LocationItemImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__LocationItemImage",
   componentId: "ozscmx-1"
@@ -372,7 +376,7 @@ var LocationItemInfo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"]
 var LocationItemResidentsContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__LocationItemResidentsContainer",
   componentId: "ozscmx-3"
-})(["display:flex;align-items:center;justify-content:space-between;width:100%;"]);
+})(["display:flex;align-items:center;justify-content:flex-start;width:100%;"]);
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
   displayName: "styles__Title",
   componentId: "ozscmx-4"
@@ -388,7 +392,7 @@ var Text = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfi
 var LocationItemResident = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__LocationItemResident",
   componentId: "ozscmx-6"
-})(["width:50px;height:50px;margin-top:12px;img{object-fit:cover;width:100%;height:100%;}"]);
+})(["width:50px;height:50px;margin-top:12px;margin-right:5%;img{object-fit:cover;width:100%;height:100%;}"]);
 
 
 /***/ }),
@@ -402,23 +406,30 @@ var LocationItemResident = styled_components__WEBPACK_IMPORTED_MODULE_0__["defau
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles */ "./components/LocationsContainer/styles.js");
-/* harmony import */ var src_components_Loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/components/Loader */ "./components/Loader/index.js");
-/* harmony import */ var _LocationItem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LocationItem */ "./components/LocationsContainer/LocationItem/index.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles */ "./components/LocationsContainer/styles.js");
+/* harmony import */ var src_components_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/components/Loader */ "./components/Loader/index.js");
+/* harmony import */ var _LocationItem__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./LocationItem */ "./components/LocationsContainer/LocationItem/index.js");
+/* harmony import */ var src_hooks_useInfiniteScroll__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/hooks/useInfiniteScroll */ "./hooks/useInfiniteScroll.js");
+
 
 var _jsxFileName = "/Users/alex/Desktop/rickandmorty/components/LocationsContainer/index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query Locations {\n    locations {\n      info {\n        count\n        pages\n        next\n        prev\n      }\n      results {\n        name\n        type\n        id\n      }\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  query Locations($page: Int!) {\n    locations(page: $page) {\n      info {\n        count\n        pages\n        next\n        prev\n      }\n      results {\n        name\n        type\n        id\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -434,55 +445,90 @@ function _templateObject() {
 
 
 
-var LOCATIONS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
+
+var LOCATIONS_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_5___default()(_templateObject());
 
 var LocationsContainer = function LocationsContainer() {
-  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(LOCATIONS_QUERY),
+  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useQuery"])(LOCATIONS_QUERY, {
+    variables: {
+      page: 0
+    }
+  }),
       data = _useQuery.data,
+      error = _useQuery.error,
       loading = _useQuery.loading,
-      error = _useQuery.error;
+      fetchMore = _useQuery.fetchMore;
 
-  return __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["StyledLocationsContainer"], {
+  var loadMore = function loadMore() {
+    if (data.locations.info.next) {
+      fetchMore({
+        variables: {
+          page: data.locations.info.next
+        },
+        updateQuery: function updateQuery(prev, _ref) {
+          var fetchMoreResult = _ref.fetchMoreResult;
+          if (!fetchMoreResult) return prev;
+          return {
+            locations: _objectSpread({}, prev.locations, {
+              info: _objectSpread({}, fetchMoreResult.locations.info),
+              results: prev.locations.results.concat(fetchMoreResult.locations.results)
+            })
+          };
+        }
+      });
+    }
+
+    return;
+  };
+
+  Object(src_hooks_useInfiniteScroll__WEBPACK_IMPORTED_MODULE_9__["useInfiniteScroll"])(loadMore);
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, error && __jsx(_styles__WEBPACK_IMPORTED_MODULE_6__["ErrorMessage"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 62
     },
     __self: this
-  }, error && __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["ErrorMessage"], {
+  }), __jsx(_styles__WEBPACK_IMPORTED_MODULE_6__["StyledLocationsContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 63
     },
     __self: this
-  }), loading && __jsx(src_components_Loader__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }), data && data.locations.results.map(function (location) {
-    return __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  }, data && data.locations.results.map(function (location) {
+    return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
       href: "/locations/".concat(location.id),
       key: location.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 66
       },
       __self: this
     }, __jsx("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 67
       },
       __self: this
-    }, __jsx(_LocationItem__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, __jsx(_LocationItem__WEBPACK_IMPORTED_MODULE_8__["default"], {
       location: location,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 68
       },
       __self: this
     })));
+  })), loading && __jsx(src_components_Loader__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }), data && data.locations.info.next && __jsx(src_components_Loader__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
   }));
 };
 
@@ -506,12 +552,57 @@ __webpack_require__.r(__webpack_exports__);
 var StyledLocationsContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__StyledLocationsContainer",
   componentId: "y9am3s-0"
-})(["display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;@media (max-width:414px){flex-direction:column;}a{text-decoration:none;color:inherit;width:100%;}"]);
+})(["display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;a{text-decoration:none;color:inherit;}@media (max-width:414px){flex-direction:column;a{width:100%;}}"]);
 var ErrorMessage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__ErrorMessage",
   componentId: "y9am3s-1"
 })(["color:red;font-weight:bold;"]);
 
+
+/***/ }),
+
+/***/ "./hooks/useInfiniteScroll.js":
+/*!************************************!*\
+  !*** ./hooks/useInfiniteScroll.js ***!
+  \************************************/
+/*! exports provided: useInfiniteScroll */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useInfiniteScroll", function() { return useInfiniteScroll; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var src_utils_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/utils/debounce */ "./utils/debounce.js");
+
+
+var useInfiniteScroll = function useInfiniteScroll(cb) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      loading = _useState[0],
+      setLoading = _useState[1];
+
+  var handleScroll = Object(src_utils_debounce__WEBPACK_IMPORTED_MODULE_1__["debounce"])(function () {
+    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || loading) {
+      return false;
+    }
+
+    setLoading(true);
+  }, 500);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!loading) return;
+    cb();
+    setLoading(false);
+  }, [loading]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    window.addEventListener('scroll', handleScroll);
+    return function () {
+      return window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
+  return {
+    loading: loading
+  };
+};
 
 /***/ }),
 
@@ -1559,6 +1650,33 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 /***/ }),
 
@@ -17916,7 +18034,38 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 1:
+/***/ "./utils/debounce.js":
+/*!***************************!*\
+  !*** ./utils/debounce.js ***!
+  \***************************/
+/*! exports provided: debounce */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "debounce", function() { return debounce; });
+var _this = undefined;
+
+var debounce = function debounce(func, wait, immediate, args) {
+  var timeout;
+  return function () {
+    var context = _this;
+    var callNow = immediate && !timeout;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+/***/ }),
+
+/***/ 2:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Falex%2FDesktop%2Frickandmorty%2Fpages%2Findex.js ***!
   \****************************************************************************************************************************/
@@ -17939,5 +18088,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

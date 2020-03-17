@@ -7,13 +7,16 @@ const StyledLocationsContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
 
-  @media (max-width: 414px) {
-    flex-direction: column;
-  }
   a {
     text-decoration: none;
     color: inherit;
-    width: 100%;
+  }
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    a {
+      width: 100%;
+    }
   }
 `;
 

@@ -7,7 +7,7 @@ const LocationItemContainer = styled.div`
   height: 145px;
   margin: 11px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   @media (min-width: 768px) {
     width: 396px;
@@ -39,7 +39,7 @@ const LocationItemInfo = styled.div`
 const LocationItemResidentsContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 `;
 
@@ -62,7 +62,7 @@ const LocationItemResident = styled.div`
   width: 50px;
   height: 50px;
   margin-top: 12px;
-  /* margin-right: 20px; */
+  margin-right: 5%;
 
   img {
     object-fit: cover;
