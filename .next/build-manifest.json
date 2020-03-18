@@ -28,10 +28,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/locations/[id]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/residents/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
