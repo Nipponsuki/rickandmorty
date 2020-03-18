@@ -3,6 +3,5 @@ install dependencies:
 run project
  # yarn dev
 
-link to deployed project
-  [link to deployed project](rickandmorty-eni98cusa.now.sh)
+[link to deployed project](rickandmorty-eni98cusa.now.sh)
 
