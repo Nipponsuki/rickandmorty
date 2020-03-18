@@ -1,7 +1,12 @@
 import React from 'react';
+import LocationDetails from 'src/components/LocationDetails';
 
 const Location = ({ id }) => {
-  return <>{id && <span style={{ color: 'hotpink' }}>id:{id}</span>}</>;
+  return (
+    <>
+      <LocationDetails id={id} />
+    </>
+  );
 };
 
 Location.getInitialProps = async ({ query }) => {

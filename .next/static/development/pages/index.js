@@ -195,25 +195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles */ "./components/LocationsContainer/LocationItem/styles.js");
-/* harmony import */ var src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/assets/images/location-types/unknown.png */ "./assets/images/location-types/unknown.png");
-/* harmony import */ var src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/assets/images/location-types/cluster.png */ "./assets/images/location-types/cluster.png");
-/* harmony import */ var src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/assets/images/location-types/dream.png */ "./assets/images/location-types/dream.png");
-/* harmony import */ var src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/assets/images/location-types/fantasy-town.png */ "./assets/images/location-types/fantasy-town.png");
-/* harmony import */ var src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/assets/images/location-types/microverse.png */ "./assets/images/location-types/microverse.png");
-/* harmony import */ var src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/assets/images/location-types/planet.png */ "./assets/images/location-types/planet.png");
-/* harmony import */ var src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/assets/images/location-types/resort.png */ "./assets/images/location-types/resort.png");
-/* harmony import */ var src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/assets/images/location-types/space-station.png */ "./assets/images/location-types/space-station.png");
-/* harmony import */ var src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/assets/images/location-types/tv.png */ "./assets/images/location-types/tv.png");
-/* harmony import */ var src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var src_components_Loader__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/components/Loader */ "./components/Loader/index.js");
+/* harmony import */ var src_utils_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/utils/helpers */ "./utils/helpers.js");
 
 var _jsxFileName = "/Users/alex/Desktop/rickandmorty/components/LocationsContainer/LocationItem/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -233,27 +215,7 @@ function _templateObject() {
 
 
 
-
-
-
-
-
-
-
-
-
 var LOCATION_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templateObject());
-var LOCATION_TYPES = {
-  unknown: src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_5___default.a,
-  cluster: src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_6___default.a,
-  dream: src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_7___default.a,
-  fantasy_town: src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_8___default.a,
-  microverse: src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_9___default.a,
-  planet: src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_10___default.a,
-  resort: src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_11___default.a,
-  space_station: src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_12___default.a,
-  tv: src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_13___default.a
-};
 var LocationItem = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (_ref) {
   var _ref$location = _ref.location,
       id = _ref$location.id,
@@ -265,52 +227,50 @@ var LocationItem = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (
       id: id
     }
   }),
-      data = _useQuery.data,
-      loading = _useQuery.loading,
-      error = _useQuery.error;
+      data = _useQuery.data;
 
-  return __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemContainer"], {
+  return __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["ItemContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 34
     },
     __self: this
-  }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemImage"], {
+  }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["ItemImage"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 35
     },
     __self: this
   }, __jsx("img", {
-    src: LOCATION_TYPES[type.replace(' ', '_').toLowerCase()] ? LOCATION_TYPES[type.replace(' ', '_').toLowerCase()] : src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+    src: Object(src_utils_helpers__WEBPACK_IMPORTED_MODULE_5__["getLocationImage"])(type),
     alt: type,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 36
     },
     __self: this
-  })), __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemInfo"], {
+  })), __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["ItemInfo"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 38
     },
     __self: this
   }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["Title"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 39
     },
     __self: this
   }, name), __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["Text"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 40
     },
     __self: this
   }, type), __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemResidentsContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 41
     },
     __self: this
   }, data && data.location.residents.slice(0, 3).map(function (resident) {
@@ -318,14 +278,14 @@ var LocationItem = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (
       key: resident.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 44
       },
       __self: this
     }, resident.image && __jsx(_styles__WEBPACK_IMPORTED_MODULE_4__["LocationItemResident"], {
       key: resident.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 46
       },
       __self: this
     }, __jsx("img", {
@@ -333,7 +293,7 @@ var LocationItem = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (
       alt: resident.name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 47
       },
       __self: this
     })));
@@ -347,30 +307,32 @@ var LocationItem = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (
 /*!**************************************************************!*\
   !*** ./components/LocationsContainer/LocationItem/styles.js ***!
   \**************************************************************/
-/*! exports provided: LocationItemContainer, LocationItemImage, LocationItemInfo, Title, Text, LocationItemResidentsContainer, LocationItemResident */
+/*! exports provided: ItemContainer, ItemImage, ItemInfo, Title, Text, LocationItemResidentsContainer, LocationItemResident */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationItemContainer", function() { return LocationItemContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationItemImage", function() { return LocationItemImage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationItemInfo", function() { return LocationItemInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemContainer", function() { return ItemContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemImage", function() { return ItemImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemInfo", function() { return ItemInfo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Text", function() { return Text; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationItemResidentsContainer", function() { return LocationItemResidentsContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationItemResident", function() { return LocationItemResident; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-var LocationItemContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__LocationItemContainer",
+var ItemContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ItemContainer",
   componentId: "ozscmx-0"
-})(["box-shadow:2px 2px 10px rgba(29,99,234,0.48);background:#312a2a;width:95%;height:145px;margin:11px;display:flex;align-items:flex-start;@media (min-width:768px){width:396px;}"]);
-var LocationItemImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__LocationItemImage",
+})(["box-shadow:2px 2px 10px rgba(29,99,234,0.48);background:", ";width:95%;height:145px;margin:11px;display:flex;align-items:flex-start;@media (min-width:768px){width:396px;}"], function (props) {
+  return props.background ? props.background : '#312a2a';
+});
+var ItemImage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ItemImage",
   componentId: "ozscmx-1"
 })(["flex:35%;height:100%;min-width:35%;img{object-fit:cover;width:100%;height:100%;}"]);
-var LocationItemInfo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__LocationItemInfo",
+var ItemInfo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ItemInfo",
   componentId: "ozscmx-2"
 })(["flex:65%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:16px;overflow:hidden;"]);
 var LocationItemResidentsContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
@@ -380,15 +342,21 @@ var LocationItemResidentsContainer = styled_components__WEBPACK_IMPORTED_MODULE_
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
   displayName: "styles__Title",
   componentId: "ozscmx-4"
-})(["font-size:", ";line-height:", ";font-weight:bold;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;"], function (props) {
+})(["font-size:", ";line-height:", ";font-weight:bold;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;margin:", ";text-align:", ";"], function (props) {
   return props.theme.fontSizes.title;
 }, function (props) {
   return props.theme.lineHeights.title;
+}, function (props) {
+  return props.margin;
+}, function (props) {
+  return props.textAlign;
 });
 var Text = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__Text",
   componentId: "ozscmx-5"
-})(["color:#dcdcdc;"]);
+})(["color:#dcdcdc;margin:", ";"], function (props) {
+  return props.margin;
+});
 var LocationItemResident = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__LocationItemResident",
   componentId: "ozscmx-6"
@@ -18065,7 +18033,71 @@ var debounce = function debounce(func, wait, immediate, args) {
 
 /***/ }),
 
-/***/ 2:
+/***/ "./utils/helpers.js":
+/*!**************************!*\
+  !*** ./utils/helpers.js ***!
+  \**************************/
+/*! exports provided: LOCATION_TYPES, getLocationImage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOCATION_TYPES", function() { return LOCATION_TYPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getLocationImage", function() { return getLocationImage; });
+/* harmony import */ var src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/assets/images/location-types/unknown.png */ "./assets/images/location-types/unknown.png");
+/* harmony import */ var src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/assets/images/location-types/cluster.png */ "./assets/images/location-types/cluster.png");
+/* harmony import */ var src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/assets/images/location-types/dream.png */ "./assets/images/location-types/dream.png");
+/* harmony import */ var src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/assets/images/location-types/fantasy-town.png */ "./assets/images/location-types/fantasy-town.png");
+/* harmony import */ var src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/assets/images/location-types/microverse.png */ "./assets/images/location-types/microverse.png");
+/* harmony import */ var src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/assets/images/location-types/planet.png */ "./assets/images/location-types/planet.png");
+/* harmony import */ var src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/assets/images/location-types/resort.png */ "./assets/images/location-types/resort.png");
+/* harmony import */ var src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/assets/images/location-types/space-station.png */ "./assets/images/location-types/space-station.png");
+/* harmony import */ var src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/assets/images/location-types/tv.png */ "./assets/images/location-types/tv.png");
+/* harmony import */ var src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+var LOCATION_TYPES = {
+  unknown: src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_0___default.a,
+  cluster: src_assets_images_location_types_cluster_png__WEBPACK_IMPORTED_MODULE_1___default.a,
+  dream: src_assets_images_location_types_dream_png__WEBPACK_IMPORTED_MODULE_2___default.a,
+  fantasy_town: src_assets_images_location_types_fantasy_town_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+  microverse: src_assets_images_location_types_microverse_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+  planet: src_assets_images_location_types_planet_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+  resort: src_assets_images_location_types_resort_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+  space_station: src_assets_images_location_types_space_station_png__WEBPACK_IMPORTED_MODULE_7___default.a,
+  tv: src_assets_images_location_types_tv_png__WEBPACK_IMPORTED_MODULE_8___default.a
+};
+
+var adjustType = function adjustType(str) {
+  return str.replace(' ', '_').toLowerCase();
+};
+
+var getLocationImage = function getLocationImage(type) {
+  if (LOCATION_TYPES[adjustType(type)]) {
+    return LOCATION_TYPES[adjustType(type)];
+  }
+
+  return src_assets_images_location_types_unknown_png__WEBPACK_IMPORTED_MODULE_0___default.a;
+};
+
+/***/ }),
+
+/***/ 1:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Falex%2FDesktop%2Frickandmorty%2Fpages%2Findex.js ***!
   \****************************************************************************************************************************/
@@ -18088,5 +18120,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

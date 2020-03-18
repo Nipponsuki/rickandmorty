@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const LocationItemContainer = styled.div`
+const ItemContainer = styled.div`
   box-shadow: 2px 2px 10px rgba(29, 99, 234, 0.48);
-  background: #312a2a;
+  background: ${props => (props.background ? props.background : '#312a2a')};
   width: 95%;
   height: 145px;
   margin: 11px;
@@ -14,7 +14,7 @@ const LocationItemContainer = styled.div`
   }
 `;
 
-const LocationItemImage = styled.div`
+const ItemImage = styled.div`
   flex: 35%;
   height: 100%;
   min-width: 35%;
@@ -26,7 +26,7 @@ const LocationItemImage = styled.div`
   }
 `;
 
-const LocationItemInfo = styled.div`
+const ItemInfo = styled.div`
   flex: 65%;
   display: flex;
   flex-direction: column;
@@ -52,10 +52,13 @@ const Title = styled.h3`
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+  margin: ${props => props.margin};
+  text-align: ${props => props.textAlign};
 `;
 
 const Text = styled.p`
   color: #dcdcdc;
+  margin: ${props => props.margin};
 `;
 
 const LocationItemResident = styled.div`
@@ -72,9 +75,9 @@ const LocationItemResident = styled.div`
 `;
 
 export {
-  LocationItemContainer,
-  LocationItemImage,
-  LocationItemInfo,
+  ItemContainer,
+  ItemImage,
+  ItemInfo,
   Title,
   Text,
   LocationItemResidentsContainer,
