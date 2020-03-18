@@ -1,3 +1,10 @@
+Tech stack:
+ * React.js
+ * Next.js
+ * Styled-components
+ * Graphql 
+
+
 install dependencies:
  # yarn install
 run project:
