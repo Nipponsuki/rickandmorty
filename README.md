@@ -10,6 +10,4 @@ install dependencies:
 run project:
  # yarn dev
 
-[link to deployed project](https://www.rickandmorty-eni98cusa.now.sh)
-
-https://rickandmorty-eni98cusa.now.sh/
+# link to deployed project https://rickandmorty-eni98cusa.now.sh/
