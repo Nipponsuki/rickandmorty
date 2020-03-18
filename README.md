@@ -4,4 +4,5 @@ run project
  # yarn dev
 
 link to deployed project
-  # rickandmorty-eni98cusa.now.sh
+  [](https://www.google.com)
+
