@@ -15,6 +15,7 @@ import { useInfiniteScroll } from 'src/hooks/useInfiniteScrollWithoutPagination'
 
 import ResidentItem from './ResidentItem';
 import Loader from '../Loader';
+import BackButton from '../Common/BackButton';
 
 const LOCATION_QUERY = gql`
   query Location($id: ID!) {
@@ -48,6 +49,7 @@ const LocationDetails = ({ id }) => {
               src={getLocationImage(data.location.type)}
               alt={data.location.type}
             />
+            <BackButton link="/" />
           </DetailsImage>
           <Title margin="45px 5px 5px 5px">{data.location.name}</Title>
           <Text margin="5px">{data.location.type}</Text>

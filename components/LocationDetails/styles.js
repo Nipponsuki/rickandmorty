@@ -3,10 +3,12 @@ import styled from 'styled-components';
 const DetailsImage = styled.div`
   width: 100%;
   height: 414px;
+  position: relative;
 
   @media (min-width: 768px) {
     width: 396px;
     margin: 0 auto;
+    position: unset;
   }
 
   img {
@@ -51,6 +53,7 @@ const LocationDetailsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
   }
 `;
 export { DetailsImage, ResidentsContainer, LocationDetailsContainer };

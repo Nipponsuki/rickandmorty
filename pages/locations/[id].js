@@ -1,4 +1,5 @@
 import React from 'react';
+
 import LocationDetails from 'src/components/LocationDetails';
 
 const Location = ({ id }) => {

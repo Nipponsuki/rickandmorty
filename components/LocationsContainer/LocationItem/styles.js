@@ -47,7 +47,7 @@ const Title = styled.h3`
   font-size: ${props => props.theme.fontSizes.title};
   line-height: ${props => props.theme.lineHeights.title};
   font-weight: bold;
-  color: #ffffff;
+  color: ${props => (props.light ? '#DCDCDC' : '#ffffff')};
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
