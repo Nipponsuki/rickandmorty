@@ -4,5 +4,5 @@ run project
  # yarn dev
 
 link to deployed project
-  [](https://www.google.com)
+  [link to deployed project](rickandmorty-eni98cusa.now.sh)
 
