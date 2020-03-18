@@ -5,3 +5,4 @@ run project:
 
 [link to deployed project](https://www.rickandmorty-eni98cusa.now.sh)
 
+https://rickandmorty-eni98cusa.now.sh/
